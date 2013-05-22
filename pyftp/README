@@ -1,0 +1,27 @@
+pyftp server
+
+1. Create a root directory to hold the user directories.
+   Configure it in config.xml.
+2. Create user directories under the root directory.
+   If you want to specify a password, create a directory named ".pyftp",
+   under which create a text file named "password" containing the MD5
+   code of the password.
+3. If you want to specify the welcome and goodbye message, write it in
+   pyftp.welcome and pyftp.goodbye under the root directory.
+4. Configure config.xml.
+
+The structure of your FTP server root may be like:
+
+-/root
+	-pyftp.welcome
+	-pyftp.goodbye
+
+	-user1
+		-.pyftp
+			-password
+		-...
+	-user2
+		-.pyftp
+			-password
+		-...
+	-anonymous
